@@ -14,7 +14,14 @@ Planning
     - Nur Web-Frontend ohne Service (mit React)
       - Als Kaffekonsument-Verantwortlicher möchte ich neue Kaffekonsumenten anlegen können.
       - Als Kaffekonsument möchte ich Kaffee hinzufügen können.
-          - Erst hochzählen drücken und dann nochmal bestätigen.
-      - Als Kaffekonsument möchte ich den Kaffeekonsum als Tabelle sehen.
+          - Möglichkei kleinen und großen Kaffe direkt hinzuzufügen.
+      - Als Kaffeekonsument möchte ich den Kaffeekonsum als Tabelle sehen.
+
 3. Iteration
     - Persistieren (evtl. Local Storage)
+
+4. Iteration
+    - Server-basiert (REST-Service, etc.)
+
+5. Iteration
+    - App über React-Native
