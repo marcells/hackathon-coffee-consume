@@ -1,18 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const express = require("express");
-const path = require("path");
-class App {
-    constructor() {
+var express = require("express");
+var path = require("path");
+var App = /** @class */ (function () {
+    function App() {
         this.express = express();
         this.mountRoutes();
     }
-    mountRoutes() {
+    App.prototype.mountRoutes = function () {
         // this.express.use("/", (req,res) => res.send("I like types"))
         // this.express.use(express.static('/public'))
         this.express.use(express.static(path.join(__dirname, 'public')));
-    }
-}
-let app = new App();
+    };
+    return App;
+}());
+var app = new App();
 exports.default = app.express;
 //# sourceMappingURL=app.js.map

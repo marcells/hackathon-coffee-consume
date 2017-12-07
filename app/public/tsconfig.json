@@ -1,14 +1,8 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",
     "sourceMap": true,
-    "jsx": "react",
-    "lib": [
-      "es2016",
-      "dom",
-      "es5"
-    ]
+    "jsx": "react"
   },
   "files": [
     "./node_modules/@types/node/index.d.ts",
