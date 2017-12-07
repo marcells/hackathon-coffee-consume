@@ -2,16 +2,19 @@
     "compilerOptions": {
       "target": "es6",
       "module": "commonjs",
-      "sourceMap": true
+      "sourceMap": true,
+      "jsx": "react",
     },
     "files": [      
       "./node_modules/@types/node/index.d.ts",
-      "./node_modules/@types/express/index.d.ts"
+      "./node_modules/@types/express/index.d.ts",
+      "./node_modules/@types/react/index.d.ts",
     ],
     "include": [
-      "app/**/*.ts"
+      "app/**/*.ts",
+      "app/**/*.tsx",
     ],
     "exclude": [
-      "node_modules"
+      "node_modules",
     ]
   }
