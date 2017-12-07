@@ -1,0 +1,13 @@
+# Node
+node_modules/
+
+# Typescript
+js/*.map
+js/ts.js
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
