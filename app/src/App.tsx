@@ -56,26 +56,38 @@ class CoffeeConsumeOverview extends React.Component<CoffeeConsumeOverviewProps> 
   }
 }
 
-class AddUser extends React.Component {
-  name: string;
+interface AddUserProps {
+  onUserAdd: any;
+}
 
+interface AddUserState {
+  name: string;
+}
+
+class AddUser extends React.Component<AddUserProps, AddUserState> {
   readonly handleKeyPress = (e: any) => {
     if (e.key === 'Enter') {
-      users.push(new User(this.name));
+      users.push(new User(e.target.value));
+      
+      e.target.value = '';
 
-      this.setState({});
+      this.props.onUserAdd();
     }
   }
 
   render() {
     return (
       <div>
-        <input placeholder="New user" value={this.name} onKeyPress={ this.handleKeyPress } />
+        <input placeholder="New user" onKeyPress={ this.handleKeyPress } />
       </div>);
   }
 }
 
 class App extends React.Component {
+  readonly onUserAdd = () => {
+    this.setState({});
+  }
+
   render() {
     return (
       <div className="App">
@@ -86,7 +98,7 @@ class App extends React.Component {
         <div className="App-intro">
           <CoffeeConsumeOverview items={users} />
         </div>
-        <AddUser />
+        <AddUser onUserAdd={this.onUserAdd} />
       </div>
     );
   }
